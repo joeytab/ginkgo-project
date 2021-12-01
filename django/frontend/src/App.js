@@ -90,22 +90,23 @@ renderItems = (results) =>{
 render() {
   return (
     <main className="Container">
-        <img src={logo} className="App-logo"  />
-        <p>
-          <b>Ginkgo DNA Alignment Tool Prototype </b> <br></br>
+        <center> <img src={logo} className="App-logo"  /> </center>
+         <center>
+        <font size="+2"><b>Ginkgo DNA Alignment Tool Prototype </b> </font> </center> <br></br>
+        <p >
           Enter a DNA sequence to query blast for matches from the following genomes: <br></br>
           NC_000852, NC_007346, NC_008724, NC_009899, NC_014637, NC_020104, NC_023423, NC_023640, NC_023719,
           NC_027867 <br></br>
           <br></br>
-          Output gives: <br></br>
+          <b>Output gives: </b><br></br>
           Sequence: the Blast result for organism and accession code <br></br>
           e_val: the expected value returned by blast, indicating significance of result <br></br>
           length: the length of the aligned sequence <br></br>
           query: the sequence searched <br></br>
           match: a string of the positions that are the same in each string <br></br>
           subject: the string to which the query is aligned 
-        </p>
         
+        </p>
         <label>
             Enter DNA sequence:
             <input
