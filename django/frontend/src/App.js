@@ -15,26 +15,9 @@ class App extends Component{
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  async componentDidMount() {
-    try {
-      const res = await fetch('http://localhost:8000/api/nt_searches/');
-      const currSeq = await res.json();
-      this.setState({
-        currSeq
-      });
-    } catch (e) {
-      console.log(e);
-  }
-  };
 
-  refreshList = () => {
-    axios
-      .get("/api/nt_searches/")
-      .then((res) => this.setState({ prevSearches: res.data }))
-      .catch((err) => console.log(err));
-  };
+
   handleInputChange = (event) =>{
-    // event.preventDefault();
     const { name, value } = event.target;
     const currSeq = {...this.state.currSeq, [name] : value};
     this.setState({
@@ -42,9 +25,6 @@ class App extends Component{
     });
   }
 renderItems = (results) =>{
-  // console.log(results);
-  // console.log("print first thing")
-  // console.log(results[0]);
   return (
     
   <Table singleLine>
@@ -85,27 +65,17 @@ renderItems = (results) =>{
     var res = await axios
       .post(`/api/nt_searches/`, str);
     const data = res.data;
-    // console.log(data);
     this.setState({"alignments" : data});
   
     this.state.prevSearches.push(data);
     console.log(this.state.prevSearches)
     const table = this.renderAlignments();
     this.setState({"tableHtml": table});
-    // console.log("prev searches");
-    // console.log(this.state.prevSearches);
-    // return(this.renderAlignments());
   };
 
   renderAlignments(){
     console.log("render alignments");
     const results = this.state.prevSearches;
-    // const results = [[{"e_val": 1.06557e-26,
-    //   "length": 2184,
-    //   "match": "|||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||",
-    //   "query": "GTTGGTAATAAATCTCACAAAACTCTAAGGACAAACTCTGGCAGAAATCCTAAGGAGAAACATTA",
-    //   "sequence": "gi|323371|gb|M55319.1|CHVTERMRE Paramecium bursaria Chlorella virus 1 terminal inverted repeat sequence",
-    //   "subject": "GTTGGTGATAAATCTCACAAAACTCTAAGGACAAACTCTGGCAGAAATCCTAAGGAGAAACATTA"}]];
     console.log(results);
     console.log(results[0]);
     if(results.length == 0){
@@ -122,25 +92,32 @@ render() {
     <main className="Container">
         <img src={logo} className="App-logo"  />
         <p>
-          Ginkgo DNA Alignment Tool Prototype
+          <b>Ginkgo DNA Alignment Tool Prototype </b> <br></br>
+          Enter a DNA sequence to query blast for matches from the following genomes: <br></br>
+          NC_000852, NC_007346, NC_008724, NC_009899, NC_014637, NC_020104, NC_023423, NC_023640, NC_023719,
+          NC_027867 <br></br>
+          <br></br>
+          Output gives: <br></br>
+          Sequence: the Blast result for organism and accession code <br></br>
+          e_val: the expected value returned by blast, indicating significance of result <br></br>
+          length: the length of the aligned sequence <br></br>
+          query: the sequence searched <br></br>
+          match: a string of the positions that are the same in each string <br></br>
+          subject: the string to which the query is aligned 
         </p>
         
         <label>
-            DNA sequence
+            Enter DNA sequence:
             <input
               name="sequence"
               type="text"
-              // value={this.state.currSeq.sequence}
               placeholder="DNA Sequence"
-              // onChange={this.handleInputChange}
-
             />
           </label>
         <button onClick={this.handleSubmit}
         > Query </button>
         {this.state.tableHtml}
-        {/* <div dangerouslySetInnerHTML={{__html: this.state.tableHtml}} /> */}
-        
+
     </main>
   );
 };
