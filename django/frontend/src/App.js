@@ -60,23 +60,22 @@ renderItems = (results) =>{
     </Table.Header>
 
     <Table.Body>
-      {/* {results.map(el => { */}
-        {/* console.log("item");
-        console.log(el);
-          return( */} 
-          <Table.Row >
-            <Table.Cell> {results[0].sequence} </Table.Cell>
-            <Table.Cell>{results[0].e_val}</Table.Cell>
-            <Table.Cell> {results[0].length} </Table.Cell>
-            <Table.Cell> {results[0].query} </Table.Cell>
-            <Table.Cell> {results[0].match} </Table.Cell>
-            <Table.Cell> {results[0].subject} </Table.Cell>
-          </Table.Row>
-      {/* )}; */}
-      {/* }) } */}
-    </Table.Body>
+        {results.map(el => {
+          console.log(el);
+           return(
+            <Table.Row key={el.sequence}>
+              <Table.Cell> {el.sequence} </Table.Cell>
+              <Table.Cell>{el.e_val}</Table.Cell>
+              <Table.Cell> {el.length} </Table.Cell>
+              <Table.Cell> {el.query} </Table.Cell>
+              <Table.Cell> {el.match} </Table.Cell>
+              <Table.Cell> {el.subject} </Table.Cell>
+            </Table.Row>
+          );
+        })}
+      </Table.Body>
   </Table>
-  );
+          )
 };
 
   handleSubmit = async() =>
