@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "reactstrap": "^8.9.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
