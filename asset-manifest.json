@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ginkgo-project/static/css/main.f0f2e43e.chunk.css",
-    "main.js": "/ginkgo-project/static/js/main.fa4464ad.chunk.js",
-    "main.js.map": "/ginkgo-project/static/js/main.fa4464ad.chunk.js.map",
-    "runtime-main.js": "/ginkgo-project/static/js/runtime-main.878422d3.js",
-    "runtime-main.js.map": "/ginkgo-project/static/js/runtime-main.878422d3.js.map",
-    "static/css/2.86a66e1b.chunk.css": "/ginkgo-project/static/css/2.86a66e1b.chunk.css",
-    "static/js/2.95070a2f.chunk.js": "/ginkgo-project/static/js/2.95070a2f.chunk.js",
-    "static/js/2.95070a2f.chunk.js.map": "/ginkgo-project/static/js/2.95070a2f.chunk.js.map",
-    "static/js/3.0dc3bf51.chunk.js": "/ginkgo-project/static/js/3.0dc3bf51.chunk.js",
-    "static/js/3.0dc3bf51.chunk.js.map": "/ginkgo-project/static/js/3.0dc3bf51.chunk.js.map",
-    "index.html": "/ginkgo-project/index.html",
-    "static/css/2.86a66e1b.chunk.css.map": "/ginkgo-project/static/css/2.86a66e1b.chunk.css.map",
-    "static/css/main.f0f2e43e.chunk.css.map": "/ginkgo-project/static/css/main.f0f2e43e.chunk.css.map",
-    "static/js/2.95070a2f.chunk.js.LICENSE.txt": "/ginkgo-project/static/js/2.95070a2f.chunk.js.LICENSE.txt",
-    "static/media/ginkgo_logo.41dd2bdd.svg": "/ginkgo-project/static/media/ginkgo_logo.41dd2bdd.svg"
+    "main.css": "/static/css/main.f0f2e43e.chunk.css",
+    "main.js": "/static/js/main.4222a9cb.chunk.js",
+    "main.js.map": "/static/js/main.4222a9cb.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.126cb07d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.126cb07d.js.map",
+    "static/css/2.86a66e1b.chunk.css": "/static/css/2.86a66e1b.chunk.css",
+    "static/js/2.1c23682e.chunk.js": "/static/js/2.1c23682e.chunk.js",
+    "static/js/2.1c23682e.chunk.js.map": "/static/js/2.1c23682e.chunk.js.map",
+    "static/js/3.0dc3bf51.chunk.js": "/static/js/3.0dc3bf51.chunk.js",
+    "static/js/3.0dc3bf51.chunk.js.map": "/static/js/3.0dc3bf51.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.86a66e1b.chunk.css.map": "/static/css/2.86a66e1b.chunk.css.map",
+    "static/css/main.f0f2e43e.chunk.css.map": "/static/css/main.f0f2e43e.chunk.css.map",
+    "static/js/2.1c23682e.chunk.js.LICENSE.txt": "/static/js/2.1c23682e.chunk.js.LICENSE.txt",
+    "static/media/ginkgo_logo.41dd2bdd.svg": "/static/media/ginkgo_logo.41dd2bdd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.878422d3.js",
+    "static/js/runtime-main.126cb07d.js",
     "static/css/2.86a66e1b.chunk.css",
-    "static/js/2.95070a2f.chunk.js",
+    "static/js/2.1c23682e.chunk.js",
     "static/css/main.f0f2e43e.chunk.css",
-    "static/js/main.fa4464ad.chunk.js"
+    "static/js/main.4222a9cb.chunk.js"
   ]
 }
