@@ -63,7 +63,7 @@ renderItems = (results) =>{
     var str = document.getElementsByName("sequence")[0].value;
     this.setState({"sequence" : str})
     var res = await axios
-      .post(`/api/nt_searches/`, str);
+      .post(`http://jbanerjee02.pythonanywhere.com/api/nt_searches/`, str);
     const data = res.data;
     this.setState({"alignments" : data});
   
