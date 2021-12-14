@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:8000",
+  "proxy": "http://jbanerjee02.pythonanywhere.com",
   "homepage":  "https://joeytab.github.io",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d -b master build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "server": "nodemon index.js --ignore client",
     "build": "react-scripts build",
